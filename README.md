@@ -1,46 +1,82 @@
-# Astro Starter Kit: Basics
 
-```sh
-npm create astro@latest -- --template basics
+# JAM Stack Project
+
+Este proyecto es una demostración moderna de JAM Stack utilizando Astro, React, Markdown, Tailwind CSS y la API de OpenAI.
+
+## Tecnologías principales
+
+- **Astro**: Framework para construir sitios web rápidos y eficientes, permitiendo el uso de componentes de diferentes frameworks.
+- **React**: Biblioteca para construir interfaces de usuario interactivas y reutilizables.
+- **Markdown**: Los artículos y contenidos se gestionan en formato Markdown, facilitando la edición y organización.
+- **Tailwind CSS**: Framework de utilidades para estilos rápidos y personalizables.
+- **OpenAI API**: Integración para generar resúmenes automáticos de los artículos usando IA.
+
+## Estructura del proyecto
+
+```
+astro.config.mjs
+package.json
+tsconfig.json
+src/
+  content.config.ts
+  api/
+  components/
+    ProyectCard.tsx
+    Resumen.tsx
+  content/
+    articulos/
+      react.md
+      jam-stack.md
+      tailwind.md
+      astro.md
+      vercel.md
+      typescript.md
+  layouts/
+    Layout.astro
+  pages/
+    index.astro
+    api/
+      openAI_Service.js
+  styles/
+    global.css
 ```
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+## Funcionalidades
 
-## 🚀 Project Structure
+- Visualización de artículos en formato Markdown sobre tecnologías JAM Stack.
+- Cada artículo puede ser resumido automáticamente usando la API de OpenAI.
+- Interfaz moderna y responsiva gracias a Tailwind CSS.
+- Componentes reutilizables en React y Astro.
 
-Inside of your Astro project, you'll see the following folders and files:
+## Instalación y uso
 
-```text
-/
-├── public/
-│   └── favicon.svg
-├── src
-│   ├── assets
-│   │   └── astro.svg
-│   ├── components
-│   │   └── Welcome.astro
-│   ├── layouts
-│   │   └── Layout.astro
-│   └── pages
-│       └── index.astro
-└── package.json
-```
+1. Clona el repositorio:
+   ```bash
+   git clone <url-del-repo>
+   cd jam
+   ```
+2. Instala las dependencias:
+   ```bash
+   npm install
+   ```
+3. Configura tu archivo `.env` con tu API Key de OpenAI:
+   ```env
+   OPENAI_API_KEY=tu_clave_aqui
+   ```
+4. Inicia el proyecto:
+   ```bash
+   npm run dev
+   ```
+5. Accede a `http://localhost:4321` para ver la aplicación.
 
-To learn more about the folder structure of an Astro project, refer to [our guide on project structure](https://docs.astro.build/en/basics/project-structure/).
+## Notas de seguridad
 
-## 🧞 Commands
+- La API Key de OpenAI nunca se expone al frontend; todas las llamadas se gestionan desde el backend.
 
-All commands are run from the root of the project, from a terminal:
+## Licencia
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
+MIT
 
-## 👀 Want to learn more?
+---
 
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+### Creado por Ariel GonzAgüer 🚀
