@@ -56,7 +56,7 @@ export default function ProyectoCard({
       </li>
 
       {loading && !resumen && (
-        <p className="text-gray-600 dark:text-gray-400">Generando resumen...</p>
+        <p className=" text-green-400">Generando resumen...</p>
       )}
 
       <Resumen
@@ -65,6 +65,7 @@ export default function ProyectoCard({
         funcion={() => {
           setResumen("");
           setEstado(false);
+          setLoading(false);
         }}
       />
     </>
