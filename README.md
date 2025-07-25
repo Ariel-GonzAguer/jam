@@ -1,4 +1,3 @@
-
 # JAM Stack Project
 
 Este proyecto es una demostración moderna de JAM Stack utilizando Astro, React, Markdown, Tailwind CSS y la API de OpenAI.
@@ -80,3 +79,15 @@ MIT
 ---
 
 ### Creado por Ariel GonzAgüer 🚀
+
+## Sobre el adaptador static (`@astrojs/adapter-static`)
+
+Al desplegar en local, se puede recibir esto en la terminal:
+
+```bash
+[WARN] [config] This project contains server-rendered routes, but no adapter is installed. This is fine for development, but an adapter will be required to build your site for production.
+```
+
+El adaptador static genera un sitio completamente estático, es decir, todos los archivos HTML, CSS y JS se crean en el build y no requieren un servidor para funcionar. Es ideal si tu sitio no necesita funciones dinámicas del lado del servidor (como APIs o SSR).
+
+Puedes usarlo para desplegar en cualquier hosting de archivos estáticos, como GitHub Pages, Netlify (en modo estático), Vercel (en modo estático), Firebase Hosting, entre otros. Sin embargo, si necesitas funciones de servidor (APIs, SSR), debes usar el adaptador específico de la plataforma (por ejemplo, `@astrojs/vercel` o `@astrojs/netlify`).

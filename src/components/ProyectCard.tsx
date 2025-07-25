@@ -26,6 +26,8 @@ export default function ProyectoCard({
 
     const data = await response.json();
     console.log(data.output);
+    console.log('Output →→', data.output.length);
+    console.log('Input →→', input.length);
     setResumen(data.output);
     setEstado(true);
   }

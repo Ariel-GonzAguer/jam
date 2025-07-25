@@ -11,7 +11,7 @@ export async function POST({ request }) {
     const response = await client.chat.completions.create({
       model: "gpt-3.5-turbo",
       messages: [
-        { role: "system", content: "genere un resumen del texto recibido, con una extensión máxima de la mita del texto recibido" },
+        { role: "system", content: "genere un resumen del texto recibido, con una extensión máxima de la mitad del texto recibido" },
         { role: "user", content: input },
       ],
     });
